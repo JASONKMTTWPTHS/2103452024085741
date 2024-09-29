@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>遊戲結束</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>遊戲結束</h1>
+    <div>
+        {{ result|safe }}
+    </div>
+    <p>最後一題結果: {{ '正確' if last_question_result else '錯誤' }}</p>  <!-- 顯示最後一題結果 -->
+    <form method="GET" action="{{ url_for('submit_name') }}">
+        <button class="btn btn-primary" type="submit">返回首頁，重新開始</button>
+    </form>
+</div>
+</body>
+</html>
+

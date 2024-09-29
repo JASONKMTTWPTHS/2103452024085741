@@ -1,0 +1,1 @@
+web: gunicorn 單字:app

@@ -1,0 +1,4 @@
+apple/苹果
+banana/香蕉
+orange/橘子
+grape/葡萄

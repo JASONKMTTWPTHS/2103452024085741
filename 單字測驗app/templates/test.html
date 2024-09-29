@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>蔡騏鴻的單字測驗app</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="bg-primary text-center">蔡騏鴻的單字測驗</h1>  <!-- 标题改为中文 -->
+    <h4>{{ question_and_choices|safe }}</h4>
+    <form method="POST" action="{{ url_for('submit_answer') }}">
+        <input type="text" class="form-control" name="answer" autofocus autocomplete="off" placeholder="輸入答案（1-4）或輸入5退出">
+        <button class="btn btn-default btn-lg" type="submit">提交答案</button>
+    </form>
+    <h4 class="bg-primary">{{ result|safe }}</h4>
+</div>
+</body>
+</html>
+
